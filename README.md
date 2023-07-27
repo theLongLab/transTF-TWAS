@@ -11,14 +11,12 @@ To determine a set of the cis-regulatory variants that potentially regulate TF e
 
 For each gene, we prepared a csv file that contains all TF-based trans-variants (TFx) for all TF-genes that regulate this target gene with the format as below:
 
-TF,CHR,LOC,GTEX-1117F,GTEX-1122O,GTEX-11EM3,GTEX-11EMC,GTEX-11GSP,GTEX-11I78,GTEX-11P81, … … \
-GREB1_1,2,10494090,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, … … \
-GREB1_2,2,10494743,2,1,1,1,1,2,0,2,0,0,2,0,1,1,1,1,1,1,0,1,0,0,1,1,2,0,1,1,1,1,1,2,0,0,0,0,1,1,0,0,1,0,1,1,1, … … \
-GREB1_3,2,10494930,2,1,2,2,1,2,1,2,0,2,2,1,1,2,2,1,2,2,1,2,2,2,2,2,2,2,2,2,2,1,2,2,1,1,2,2,1,2,2,2,1,1,2,2,2, … … \
+TF,CHR,LOC,ID-1,ID-2,ID-3,ID-4,ID-5, … … \
+GREB1_1,2,10494090,0,0,0,0,0,0,0,1, … … \
+GREB1_2,2,10494743,2,1,1,1,1,2,0,2, … … \
  … … \
-FOXA1_1,14,37708623,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, … … \
-FOXA1_2,14,37709692,0,1,0,1,0,1,0,1,1,2,2,0,2,1,2,1,0,0,2,0,0,0,1,2,2,1,0,2,1,1,0,2,0,1,1,1,0,1,0,1,1,1,0,2, … … \
-FOXA1_3,14,37709729,2,1,2,1,1,1,1,1,1,0,1,2,0,0,1,1,2,1,0,2,2,1,1,0,1,1,2,0,1,2,1,0,2,1,1,1,1,1,1,1,0,1,2,2, … … \
+FOXA1_1,14,37708623,0,0,0,1,1,1,0, … … \
+FOXA1_2,14,37709692,0,1,0,1,0,1,0, … … \
  … … 
 
 **2)	Gene expression file:** \
@@ -35,10 +33,10 @@ Take the breast cancer as an example. We prioritized putative regulatory variant
 
 The tissue specific input genotype file ("genotype_file") with the format as below:
 
- CHR,LOC,GTEX-1117F,GTEX-1122O,GTEX-11EM3,GTEX-11EMC,GTEX-11GSP,GTEX-11I78,GTEX-11P81, … … \
- 1,933303,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, … … \
- 1,933411,1,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2, … … \
- 1,933653,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0, … … \
+ CHR,LOC,ID-1,ID-2,ID-3,ID-4,ID-5, … … \
+ 1,629906,0,0,0,0,0,0,0,0,1,0, … … \
+ 1,630026,1,0,0,2,1,0,0,0,2,1, … … \
+ 1,778639,0,0,0,0,0,0,0,0,0,0, … … \
  … …
 
 The input genotype file for calculating covariance ("covariance_genotype_file") should be non-tissue specific, with the same format as the tissue specific input genotype file.
@@ -51,8 +49,6 @@ SNP,varID,chr,pos,ref,effect \
 rs1578391,chr1_629906_C_T_b38,1,629906,C,T \
 rs6594029,chr1_630026_C_T_b38,1,630026,C,T \
 rs114983708,chr1_778639_A_G_b38,1,778639,A,G \
-rs71507461,chr1_827209_G_C_b38,1,827209,G,C \
-rs71507462,chr1_827212_C_G_b38,1,827212,C,G \
 … …
 
 
