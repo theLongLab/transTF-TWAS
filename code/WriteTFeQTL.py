@@ -9,7 +9,7 @@ for line in lines[1:]:
     tf_gene_list.append(line.split("\t")[0].strip())
 TF_file.close()
 
-gencode_file=open("/work/long_lab/jingni/project/trans_TWAS/Data_Dir/ori_data/TSS_Promoter/gencode.v26.GRCh38.genes.csv",'r')
+gencode_file=open("gencode.v26.GRCh38.genes.csv",'r')
 gene_id_list=[]
 geneid_geneid2_dict={}
 geneid_name_dict={}
